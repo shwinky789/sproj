@@ -1,0 +1,93 @@
+a{
+	color: black;
+	text-decoration: none;
+}
+a:hover{
+	color: #3498db;
+}
+#feed{
+	/*background-color: #3498db;*/
+	/*background-image:url("../images/back1.png");*/
+	/*background-color: #ecf0f1;*/
+	background-image: url("../images/feed1.png");
+	border: 2px solid black;
+	border-color: #7f8c8d;
+	width: 700px;
+	min-height: 600px;
+    height: auto !important;
+    height: 600px;	
+	text-align: center;
+	border-radius: 10px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#signin{
+	font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+	font-size: 50px;
+	text-align: center;
+}
+#signinback{
+	background-image:url("../images/back1.png");
+}
+
+#homeusername{
+	font-size: 50px;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	color: black;
+}
+
+#homeusername:hover{
+	font-size: 50px;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	color: #3498db;
+	text-decoration: overline;
+}
+
+#homepage{
+	background-image:url("../images/back1.png");
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+
+#homegenres{
+	position: fixed;
+	right:70px;
+	bottom: 200px;
+	font-size: 40px;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+
+}
+
+#postbox{
+	border: 15px;
+/*	background-image: url(../images/post1.png);*/
+	border-radius: 15px;
+}
+
+.poster{
+	width: 650px;
+	height: 100px;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	font-size: 50px;
+}
+
+#wyltbutton{
+	position: fixed;
+	top: 1px;
+	/*font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;*/
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	font-size: 70px;
+	text-decoration: none;
+	color: black;
+
+}
+#wyltbutton:hover{
+	position: fixed;
+	top: 1px;
+	left: 15px;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	font-size: 70px;
+/*	text-decoration: overline;*/
+	color: #3498db;
+	text-decoration: overline;
+}

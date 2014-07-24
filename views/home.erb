@@ -1,1 +1,49 @@
-<%= flash[:message] if flash[:message]%>
+<body id="homepage">
+<div id="feed">
+	<%= flash[:message] if flash[:message]%>
+	<!-- <a href="/prof/<%=@user.username%>"><h1 id="homeusername"><%= @user.username %></h1></a> -->
+	<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+			<link rel="stylesheet" type="text/css" href="../styles/styles.css"/>
+
+	<form method="POST" action="/newpost">
+		<label for="content">Description<br></label>
+		<input class="poster" type="content" name="content">
+		<br>
+		<br>
+		<label for"song">Youtube Song Link<br></label>
+		<input class="poster" type="song" name="song"  required>
+		<!-- pattern="(([http:\/\/]*)([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}([\S]*))" -->
+		<br>
+		<br>
+		<select name="genre">
+			<%Genre.all().each do |n|%>
+				<option><%=n.name%></option>
+			<%end%>
+		</select>
+	<input type="submit" name="submit" value="Post A Wylt">
+	</form>
+	<%@posts.reverse.each do |t|%>
+		<div id="postbox"><a href="/prof/<%= User.find(t.user_id).username%>"><h2><%= User.find(t.user_id).username%> </h2></a>
+		<h3> <%= t.content %> </h3>
+		  <iframe width="560" height="315" src="//www.youtube.com/embed/<%=t.song%>" frameborder="0" allowfullscreen></iframe>
+		<h6> <%= t.created_at%> </h6>
+		<h6> <%= t.genre%> </h6></div>
+		<hr>
+	<%end%>	
+
+	<div id="homegenres">
+		<a href="/prof/<%=@user.username%>"><h1 id="homeusername"><%= @user.username %></h1></a>
+		<ul>
+			<%Genre.all().each do |n|%>
+					<a href="/genre/<%=n.id%>"><li><%=n.name%></li></a>
+			<%end%>
+		</ul>
+		<a href="/signout"><h2 id="homeusername">Sign Out</h2></a>
+	</div>
+</div><a href="/home">
+	<div id="wyltbutton">
+		<h1>Wylt</h1>
+</div></a>
+</body>
+
+

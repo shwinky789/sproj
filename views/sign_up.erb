@@ -1,3 +1,6 @@
+<link rel="stylesheet" type="text/css" href="styles/styles.css">
+<body id="signinback">
+<div id="signin">
 <form method="POST" action="/sign-up-process">
 	<label for="email">Email</label>
 	<input type="email" name="email">
@@ -6,7 +9,10 @@
 	<input type="username" name="username">
 	&nbsp;&nbsp;
 	<label for="password">Password</label>
-	<input type="password" name="password">
-<br>
-<input type="submit" name="submit" value="Sign Up">
+	<input type="password" required name="password">
+<br><br>
+	<input id="button" type="submit" name="submit" value="Sign Up">
+<!-- <a href="/sign-in"><img src="images/headphones1.png"></a> -->
 </form>
+</div>
+</body>

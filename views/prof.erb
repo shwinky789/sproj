@@ -1,0 +1,28 @@
+<link rel="stylesheet" type="text/css" href="../styles/styles.css">
+<body id="homepage">
+<div id="feed">
+<h1><%=@user.username%>'s Profile</h1>
+<br>
+<% @post.reverse.each do |t| %>
+	<h3> <%=t.content%> </h3>
+		<iframe width="560" height="315" src="//www.youtube.com/embed/<%=t.song%>" frameborder="0" allowfullscreen></iframe>
+	<h6> <%= t.created_at%> </h6>
+	<h6> <%= t.genre%> </h6>
+	<hr>
+<% end %> 
+</div>
+</body>
+
+<div id="homegenres">
+<a href="/prof/<%=@user.username%>"><h1 id="homeusername"><%= User.find(session[:user_id]).username %></h1></a>
+<ul>
+	<%Genre.all().each do |n|%>
+			<a href="/genre/<%=n.id%>"><li><%=n.name%></li></a>
+	<%end%>
+</ul>
+<a href="/signout"><h2 id="homeusername">Sign Out</h2></a>
+</div>
+</div><a href="/home">
+	<div id="wyltbutton">
+		<h1>Wylt</h1>
+</div></a>
